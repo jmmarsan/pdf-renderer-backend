@@ -3,10 +3,13 @@ import express from 'express';
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hola mundo desde Express');
+app.get('/data', (req, res) => {
+  // URL: /data?q=1000
+   const { q } = req.query;  // q = 'node', limit = '10'
+  res.send(`Buscando: ${q}`);
 });
 
+
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT} modificado`);
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
