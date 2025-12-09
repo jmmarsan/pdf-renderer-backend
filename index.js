@@ -1,4 +1,5 @@
 import express from 'express';
+import generarDatos from './utils/generarDatos.js';
 
 const app = express();
 const PORT = 3000;
@@ -6,7 +7,8 @@ const PORT = 3000;
 app.get('/data', (req, res) => {
   // URL: /data?q=1000
    const { q } = req.query;  // q = 'node', limit = '10'
-  res.send(`Buscando: ${q}`);
+   const data = generarDatos(q);
+  res.send(data);
 });
 
 
