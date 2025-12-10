@@ -25,7 +25,7 @@ export default function drawHeader(doc, {
 
   doc.fontSize(11).fillColor('#000000');
 
-  const headerTop = top + 30;
+  const headerTop = top + 20;
 
   doc.font('Helvetica-Bold');
   doc.text('Nombre del informe:', leftHeader, headerTop);
