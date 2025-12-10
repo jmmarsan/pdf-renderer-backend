@@ -31,13 +31,7 @@ export function buildReportPdf({ data, reportName = 'Alfreo' }) {
   const pageWidth = doc.page.width;
   const pageHeight = doc.page.height;
   let pageNumber = 1;
-  const totalPages = calculateTotalPages({
-    itemCount: data.length,
-    pageHeight: doc.page.height,
-    margins: MARGINS,
-    headerHeight: HEADER_HEIGHT,
-    tableRowHeight: TABLE_ROW_HEIGHT,
-  });
+  const totalPages = calculateTotalPages(data.length);
 
   const { top, bottom, left, right } = MARGINS;
   const leftHeader = left + 15;

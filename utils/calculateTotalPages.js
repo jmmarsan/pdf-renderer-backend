@@ -1,4 +1,4 @@
-export default function calculateTotalPages({ itemCount }) {
+export default function calculateTotalPages(itemCount) {
   if (itemCount <= 0) return 0;      // opcional: sin elementos, 0 páginas
   if (itemCount <= 29) return 1;
 
