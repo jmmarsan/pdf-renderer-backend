@@ -41,6 +41,19 @@ app.get('/', (req, res) => {
     code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
     pre { background: #f4f4f4; padding: 1rem; border-radius: 4px; overflow-x: auto; }
     h1, h2 { color: #333; }
+    .example-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+      background: #34495e;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .example-link:hover {
+      background: #2c3e50;
+    }
   </style>
 </head>
 <body>
@@ -57,14 +70,21 @@ app.get('/', (req, res) => {
 
   <p>
     Donde <code>q=&lt;cantidad&gt;</code> indica el número de elementos que se quieren incluir en el PDF.
-    Por ejemplo, <code>/pdf?q=1000</code> generará un PDF con 1000 registros.
   </p>
+
+  <p>
+    Ejemplo con 30000 elementos:
+  </p>
+  <a class="example-link" href="/pdf?q=30000">
+    Generar PDF de ejemplo (q=30000)
+  </a>
 </body>
 </html>
   `.trim();
 
   res.send(html);
 });
+
 
 
 
