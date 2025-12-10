@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon express",
-    "start": "node index",
+    "start": "cross-env NODE_ENV=production node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-build": "docker build -t hola-mundo .",
     "docker-run": "docker run -p 3000:3000 hola-mundo"
@@ -19,6 +19,7 @@
     "pdfkit": "^0.17.2"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "eslint": "^9.39.1",
     "nodemon": "^3.1.11"
   }
