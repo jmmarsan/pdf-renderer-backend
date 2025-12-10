@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
   </p>
 
   <p>
-    Ejemplo con 30000 elementos:
+    Ejemplo con 1000 elementos:
   </p>
   <a class="example-link" href="/pdf?q=1000">
     Generar PDF de ejemplo (q=1000)
