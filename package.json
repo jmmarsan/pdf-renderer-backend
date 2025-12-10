@@ -8,13 +8,14 @@
     "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docker-build": "docker build -t hola-mundo .",
-    "docker-run": "docker run -p 3000:3000 hola-mundo" 
+    "docker-run": "docker run -p 3000:3000 hola-mundo"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pdfkit": "^0.17.2"
   },
   "devDependencies": {
     "eslint": "^9.39.1",
