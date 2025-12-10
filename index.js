@@ -1,10 +1,13 @@
 import express from 'express';
+import compression from 'compression';
 import generarDatos from './utils/generarDatos.js';
 import buildReportName from './utils/buildReportName.js';
 import { buildReportPdf } from './backend/pdf-report.js';
 
 
 const app = express();
+// habilita gzip para todas las respuestas
+app.use(compression());
 const PORT = 3000;
 
 app.get('/pdf', (req, res) => {
